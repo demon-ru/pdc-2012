@@ -1,0 +1,12 @@
+<?php
+
+/**
+ * Загрузка класса, реализующего хранилище через PEER:MDB2 - интерфейс работы с СУБД
+ */
+
+require_once(dirname(__FILE__).'/games-datastorage-mdb2.inc');
+
+/**
+ * Подключение к базе данных и установка его как хранилище в менеджере игр
+ */
+GameManager::SetStorage(new GameDataStorage_MDB2('mysql://usr:pw@localhost/dbnam'));

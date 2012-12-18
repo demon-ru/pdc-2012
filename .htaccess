@@ -1,0 +1,4 @@
+RewriteEngine on
+
+RewriteRule ^([^/].+)/games(|/)$	index.php?name=$1 [QSA,L]
+RewriteRule ^([^/].+)/games/([^/]+)$	index.php?name=$1&id=$2 [QSA,L]
