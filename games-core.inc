@@ -310,6 +310,7 @@ class GameManager
 		$is_correct = (is_numeric($id));
 		if ($toRaise && !$is_correct)
 			throw new GameMoveException("GameID is incorrect");
+		return $is_correct;
 	}
 
 	public static function newGame($name)
